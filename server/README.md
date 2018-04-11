@@ -74,16 +74,18 @@ angular-spring-starter/server
 
 
 ```
+server:
+  port: 8090
 spring:
-  jpa:
-    hibernate:
-      # possible values: validate | update | create | create-drop
-      ddl-auto: create-drop
   datasource:
-    url: jdbc:mysql://localhost/myDatabase
-    username: myUser
-    password: myPassword
     driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/angular
+    username: root
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 ```
 *Hint: For other databases like MySQL sequences don't work for ID generation. So you have to change the GenerationType in the entity beans to 'AUTO' or 'IDENTITY'.*
 
