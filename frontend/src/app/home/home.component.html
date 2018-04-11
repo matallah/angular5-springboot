@@ -1,0 +1,149 @@
+<div class="content" fxLayout="row" fxLayoutAlign="center none">
+  <!--<app-api-card-->
+  <!--fxFlex-->
+  <!--title='"Foo"'-->
+  <!--subTitle="Public"-->
+  <!--imgUrl="assets/image/foo.png"-->
+  <!--content='This is an demo public endpoint which requires no authentication.'-->
+  <!--apiText="/api/foo"-->
+  <!--[responseObj]="fooResponse"-->
+  <!--(apiClick)="makeRequest($event)"-->
+  <!--&gt;-->
+  <!--</app-api-card>-->
+
+  <!--<app-api-card-->
+  <!--fxFlex-->
+  <!--title='"Who am I"'-->
+  <!--subTitle="Authorized role: USER"-->
+  <!--imgUrl="assets/image/user.png"-->
+  <!--content='The regular endpoint which returns the current user information. You have to sign in as either a User or an Admin to gain the access to this endpoint.'-->
+  <!--apiText="/api/whoami"-->
+  <!--[responseObj]="whoamIResponse"-->
+  <!--(apiClick)="makeRequest($event)"-->
+  <!--&gt;-->
+  <!--</app-api-card>-->
+
+  <!--<app-api-card-->
+  <!--class="last"-->
+  <!--fxFlex-->
+  <!--title='"All users"'-->
+  <!--subTitle="Authorized role: ADMIN"-->
+  <!--imgUrl="assets/image/admin.png"-->
+  <!--content='This endpoint will give you a list of all the users. You have to sign in as an Admin to gain the access to this endpoint.'-->
+  <!--apiText="/api/user/all"-->
+  <!--[responseObj]="allUserResponse"-->
+  <!--(apiClick)="makeRequest($event)"-->
+  <!--&gt;-->
+  <!--</app-api-card>-->
+
+  <p-tabView>
+    <p-tabPanel header="Product">
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="name" type="text" size="30" pInputText>
+            <label for="name">Name</label>
+          </span>
+        </div>
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="description" type="text" size="30" pInputText>
+            <label for="description">Description</label>
+          </span>
+        </div>
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="minPrice" type="text" size="30" pInputText>
+            <label for="minPrice">Min.Price</label>
+          </span>
+        </div>
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="maxPrice" type="text" size="30" pInputText>
+            <label for="maxPrice">Max.Price</label>
+          </span>
+        </div>
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <button pButton type="button" label="Save"></button>
+          </div>
+          <div class="ui-g-6">
+            <button pButton type="button" label="Delete"></button>
+          </div>
+        </div>
+      </div>
+      <p-dataTable [value]="cars">
+        <p-column field="vin" header="Name"></p-column>
+        <p-column field="year" header="Description"></p-column>
+        <p-column field="brand" header="Min.Price"></p-column>
+        <p-column field="color" header="Max.Price"></p-column>
+      </p-dataTable>
+    </p-tabPanel>
+    <p-tabPanel header="Operator">
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="nameOperator" type="text" size="30" pInputText>
+            <label for="nameOperator">Name</label>
+          </span>
+        </div>
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="country" type="text" size="30" pInputText>
+            <label for="country">Country</label>
+          </span>
+        </div>
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <button pButton type="button" label="Save"></button>
+          </div>
+          <div class="ui-g-6">
+            <button pButton type="button" label="Delete"></button>
+          </div>
+        </div>
+      </div>
+      <p-dataTable [value]="cars">
+        <p-column field="vin" header="Name"></p-column>
+        <p-column field="year" header="Country"></p-column>
+      </p-dataTable>
+    </p-tabPanel>
+    <p-tabPanel header="Services">
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="nameServices" type="text" size="30" pInputText>
+            <label for="nameServices">Name</label>
+          </span>
+        </div>
+        <div class="ui-g-6">
+          <span class="ui-float-label">
+            <input id="type" type="text" size="30" pInputText>
+            <label for="type">Type</label>
+          </span>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown [options]="cities2" [(ngModel)]="selectedCity2" optionLabel="name"></p-dropdown>
+        </div>
+        <div class="ui-g-6">
+        </div>
+        <div class="ui-g">
+          <div class="ui-g-6">
+            <button pButton type="button" label="Save"></button>
+          </div>
+          <div class="ui-g-6">
+            <button pButton type="button" label="Delete"></button>
+          </div>
+        </div>
+      </div>
+      <p-dataTable [value]="cars">
+        <p-column field="vin" header="Name"></p-column>
+        <p-column field="year" header="Type"></p-column>
+      </p-dataTable>
+    </p-tabPanel>
+  </p-tabView>
+
+
+</div>
+
+
+<!--<app-github></app-github>-->
