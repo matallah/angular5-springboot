@@ -3,7 +3,6 @@
  
  SpringBoot , Spring repository , Restful web service , MySQL
    
-
 ## Quick start
 **Make sure you have Maven and Java 1.7 or greater**
 **Make sure you also have NPM 3.1, Node 6.9.5 and angular-cli@1.0.0 globally installed**
